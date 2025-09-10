@@ -43,7 +43,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       if (savedTheme) {
         updateTheme(savedTheme)
       } else {
-        updateTheme(Theme.SYSTEM)
+        updateTheme(Theme.DARK)
       }
       setMounted(true)
       isInitialMount.current = false

@@ -38,9 +38,7 @@ export default function Footer() {
                 </button>
               )}
             </div>
-            <div className="flex items-center">
-              <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-            </div>
+
             <div className="flex items-center">
               <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
             </div>
@@ -68,7 +66,7 @@ export default function Footer() {
             <Link href="/">{maintitle[locale]}</Link>
           </div>
           <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-            <Link href="https://github.com/PxlSyl/tailwind-nextjs-starter-blog-i18n">
+            <Link href={t('link')} target="_blank" rel="noopener noreferrer">
               {t('theme')}
             </Link>
           </div>

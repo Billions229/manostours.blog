@@ -1,27 +1,27 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js i18n Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js, i18n and Tailwind.css',
+  title: 'West Africa Tourism Guide',
+  author: 'Herman AKUE',
+  headerTitle: 'WestAfricaTours',
+  description: 'Discover the authentic treasures of West Africa with Herman AKUE, your professional guide to Benin, Togo and Ghana',
   language: 'en',
-  theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog-i18n.vercel.app',
-  siteRepo: 'https://github.com/PxlSyl/tailwind-nextjs-starter-blog-i18n',
+  theme: 'dark', // system, dark or light
+  siteUrl: 'https://west-africa-tourism.vercel.app',
+  siteRepo: 'https://github.com/herman-akue/west-africa-tourism',
   siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
-  // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
+  socialBanner: '/static/images/west-africa-banner.png',
+  mastodon: 'https://mastodon.social/@hermanakue',
+  email: 'herman.akue@westafrica-tours.com',
+  github: 'https://github.com/herman-akue',
+  x: 'https://twitter.com/hermanakue',
+  // twitter: 'https://twitter.com/hermanakue',
+  facebook: 'https://facebook.com/hermanakue',
+  youtube: 'https://youtube.com/@westafrica-tours',
+  linkedin: 'https://www.linkedin.com/in/herman-akue',
+  threads: 'https://www.threads.net/@hermanakue',
+  instagram: 'https://www.instagram.com/hermanakue',
   locale: 'en',
-  multiauthors: true,
+  multiauthors: false,
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -94,10 +94,10 @@ const siteMetadata = {
   // formspree support :
   //if set to false, simple "mailto"
   // if set to true, get a free account there : https://formspree.io/ and go to read.me doc
-  formspree: true,
+  formspree: false,
   // waline support
-  iswaline: false,
-  walineServer: '',
+  iswaline: true,
+  walineServer: 'https://west-africa-comments.vercel.app',
 }
 
 module.exports = siteMetadata
