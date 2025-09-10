@@ -1,4 +1,4 @@
-import { ValidationError } from '@formspree/react'
+// Removed Formspree dependency
 
 interface FormInputsProps {
   name: string
@@ -45,7 +45,6 @@ export const FormInputs: React.FC<FormInputsProps> = ({
         onChange={handleEmailChange}
         className="mb-2 w-full rounded-md border-black bg-white p-2 text-base text-black outline-none transition disabled:cursor-not-allowed disabled:bg-neutral-900 disabled:opacity-70 dark:border-white dark:bg-black dark:text-white"
       />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
       <textarea
         required
         id="message"
@@ -55,7 +54,6 @@ export const FormInputs: React.FC<FormInputsProps> = ({
         onChange={handleMessageChange}
         className="mb-2 w-full rounded-md border-black bg-white p-2 text-base text-black outline-none transition disabled:cursor-not-allowed disabled:bg-neutral-900 disabled:opacity-70 dark:border-white dark:bg-black dark:text-white"
       />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
     </>
   )
 }

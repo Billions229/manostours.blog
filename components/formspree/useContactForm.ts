@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { useForm } from '@formspree/react'
+import { useState, useEffect, useCallback } from 'react'
 import toast from 'react-hot-toast'
 import { useParams } from 'next/navigation'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
@@ -8,10 +7,24 @@ import { useTranslation } from 'app/[locale]/i18n/client'
 export const useContactForm = () => {
   const locale = useParams()?.locale as LocaleTypes
   const { t } = useTranslation(locale, 'common')
-  const [state, handleSubmit, reset] = useForm('xdojkndq')
+  const [state, setState] = useState({ submitting: false, succeeded: false, errors: {} })
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [message, setMessage] = useState<string>('')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setState({ submitting: true, succeeded: false, errors: {} })
+
+    // Simulate form submission
+    setTimeout(() => {
+      setState({ submitting: false, succeeded: true, errors: {} })
+    }, 1000)
+  }
+
+  const reset = useCallback(() => {
+    setState({ submitting: false, succeeded: false, errors: {} })
+  }, [])
 
   useEffect(() => {
     if (state.succeeded && !state.submitting) {
@@ -53,5 +66,6 @@ export const useContactForm = () => {
     handleEmailChange,
     handleMessageChange,
     t,
+    reset,
   }
 }
