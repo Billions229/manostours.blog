@@ -103,3 +103,6 @@ Avec sa **jeunesse entrepreneuse**, ses **ressources naturelles** et sa **stabil
 ---
 
 Le Ghana incarne l'essence de l'Afrique résiliente et optimiste. Entre les vestiges de son passé tumultueux et les promesses de son avenir radieux, il invite le monde à découvrir sa vibrante culture, sa nature généreuse et son peuple accueillant. Bien plus qu'une destination, le Ghana est une expérience qui marque les esprits et inspire les cœurs.
+
+
+west-africa-tour. 

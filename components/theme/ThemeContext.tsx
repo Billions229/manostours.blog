@@ -1,6 +1,7 @@
 'use client'
 
 import React, { createContext, useState, useContext, useEffect, useRef, useCallback } from 'react'
+import siteMetadata from '@/data/siteMetadata'
 
 export enum Theme {
   LIGHT = 'light',
@@ -43,7 +44,14 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       if (savedTheme) {
         updateTheme(savedTheme)
       } else {
-        updateTheme(Theme.DARK)
+        // Use siteMetadata theme configuration
+        const defaultTheme =
+          siteMetadata.theme === 'dark'
+            ? Theme.DARK
+            : siteMetadata.theme === 'light'
+              ? Theme.LIGHT
+              : Theme.SYSTEM
+        updateTheme(defaultTheme)
       }
       setMounted(true)
       isInitialMount.current = false

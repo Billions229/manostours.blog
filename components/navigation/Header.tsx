@@ -72,7 +72,9 @@ const Header = () => {
             })}
           <AuthorsMenu className="hidden sm:block" />
           <SearchButton />
-          <ThemeSwitch />
+          <div className="flex items-center">
+            <ThemeSwitch />
+          </div>
           <LangSwitch />
           <MobileNav />
         </div>
