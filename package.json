@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-nextjs-starter-blog-i18n",
+  "name": "west-africa-tour",
   "version": "2.2.0",
   "private": true,
   "scripts": {
@@ -80,6 +80,5 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  },
-  "packageManager": "yarn@4.0.2"
+  }
 }
