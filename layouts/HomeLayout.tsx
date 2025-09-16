@@ -5,6 +5,7 @@ import { createTranslation } from '../app/[locale]/i18n/server'
 import { LocaleTypes } from '../app/[locale]/i18n/settings'
 import PostList from './home/PostList'
 import LayoutHeader from './home/LayoutHeader'
+import BlogPreview from '@/components/BlogPreview'
 
 interface Post {
   slug: string
@@ -42,6 +43,19 @@ export default async function HomeLayout({ posts, params: { locale } }: HomeProp
           </Link>
         </div>
       )}
+
+      {/* Section Blog West Africa Tours */}
+      <div className="py-8">
+        <BlogPreview
+          locale={locale}
+          maxPosts={3}
+          showFeaturedOnly={true}
+          className="mb-8"
+          showFilters={false}
+          showStats={false}
+        />
+      </div>
+
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
